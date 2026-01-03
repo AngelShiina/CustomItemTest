@@ -6,6 +6,7 @@ import io.papermc.paper.datacomponent.item.ItemAttributeModifiers;
 import net.kitsuakihiko.Main;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
@@ -13,6 +14,7 @@ import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.EquipmentSlotGroup;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
 
 public class SpeedSword {
 
@@ -30,5 +32,20 @@ public class SpeedSword {
         speedsword.setData(DataComponentTypes.MAX_STACK_SIZE, 1);
 
         return speedsword;
+    }
+
+    public void registerSpeedSwordRecipe() {
+        ItemStack result = getSpeedSword().clone();
+        NamespacedKey key = new NamespacedKey(Main.getInstance(), "speed_sword");
+        ShapedRecipe recipe = new ShapedRecipe(key, result);
+        recipe.shape(new String(new char[]{' ', 'I', ' '}), "SSS", new String(new char[]{' ', 'L', ' '})
+        );
+
+        recipe.setIngredient('I', Material.IRON_BLOCK);
+        recipe.setIngredient('S', Material.STONE);
+        recipe.setIngredient('L', Material.LEATHER);
+
+        Bukkit.addRecipe(recipe);
+
     }
 }

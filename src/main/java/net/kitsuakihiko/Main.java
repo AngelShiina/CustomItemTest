@@ -20,11 +20,14 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         instance = this;
         speedSword = new SpeedSword();
-        getCommand("speedsword").setExecutor(new SpeedSwordCommand());
+        speedSword();
 
         Bukkit.getConsoleSender().sendMessage(prefix + "§aloaded!");
+    }
 
-
+    private void speedSword() {
+        getCommand("speedsword").setExecutor(new SpeedSwordCommand());
+        speedSword.registerSpeedSwordRecipe();
     }
 
     @Override
