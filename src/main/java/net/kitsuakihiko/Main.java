@@ -3,6 +3,7 @@ package net.kitsuakihiko;
 import lombok.Getter;
 import net.kitsuakihiko.commands.SpeedSwordCommand;
 import net.kitsuakihiko.items.SpeedSword;
+import net.kitsuakihiko.listener.SpeedSwordListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,6 +20,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        saveDefaultConfig();
         speedSword = new SpeedSword();
         speedSword();
 
@@ -27,7 +29,13 @@ public final class Main extends JavaPlugin {
 
     private void speedSword() {
         getCommand("speedsword").setExecutor(new SpeedSwordCommand());
-        speedSword.registerSpeedSwordRecipe();
+
+        if(!getConfig().getBoolean("speed_sword_crafted", false)) {
+            speedSword.registerSpeedSwordRecipe();
+        } else {
+            Bukkit.getConsoleSender().sendMessage(prefix + "§cRecipe not registered (already crafted).");
+        }
+        getServer().getPluginManager().registerEvents(new SpeedSwordListener(), this);
     }
 
     @Override
