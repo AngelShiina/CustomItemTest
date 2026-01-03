@@ -1,0 +1,9 @@
+name: CustomItemTest
+version: '1.0-SNAPSHOT'
+main: de.angelshiina.Main
+api-version: '1.21'
+authors: [ AngelShiina ]
+commands:
+  speedsword:
+    description: gives you a speedsword
+    permission: speedsword.get
