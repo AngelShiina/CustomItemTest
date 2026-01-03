@@ -1,4 +1,4 @@
-package net.kitsuakihiko.items;
+package net.kitsuakihiko.speedsword;
 
 import io.papermc.paper.datacomponent.DataComponentTypes;
 import io.papermc.paper.datacomponent.item.Equippable;

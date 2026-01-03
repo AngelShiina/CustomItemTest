@@ -1,4 +1,4 @@
-package net.kitsuakihiko.commands;
+package net.kitsuakihiko.speedsword;
 
 import net.kitsuakihiko.Main;
 import org.bukkit.command.Command;
@@ -16,7 +16,7 @@ public class SpeedSwordCommand implements CommandExecutor {
             return true;
         }
 
-        if(!player.hasPermission("speedsword.get")) {
+        if(!player.hasPermission("swords.get.speedsword")) {
             player.sendMessage(Main.getInstance().prefix + "§cYou don't have the permission to do this!");
             return true;
         }

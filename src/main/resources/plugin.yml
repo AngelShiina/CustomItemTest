@@ -6,8 +6,13 @@ authors: [ AngelShiina, Kitsuakihiko ]
 commands:
   speedsword:
     description: gives you a speedsword
-    permission: speedsword.get
+    permission: swords.get.speedsword
+  heavysword:
+    description: gives you a heavysword
+    permission: swords.get.heavysword
 
 permissions:
-  speedsword.get:
+  swords.get.speedsword:
+    default: op
+  swords.get.heavysword:
     default: op
