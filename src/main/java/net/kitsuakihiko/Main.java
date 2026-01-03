@@ -1,9 +1,10 @@
-package de.angelshiina;
+package net.kitsuakihiko;
 
 import lombok.Getter;
+import net.kitsuakihiko.commands.SpeedSwordCommand;
+import net.kitsuakihiko.items.SpeedSword;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.checkerframework.checker.units.qual.Speed;
 
 public final class Main extends JavaPlugin {
 

@@ -1,9 +1,13 @@
 name: CustomItemTest
 version: '1.0-SNAPSHOT'
-main: de.angelshiina.Main
+main: net.kitsuakihiko
 api-version: '1.21'
-authors: [ AngelShiina ]
+authors: [ AngelShiina, Kitsuakihiko ]
 commands:
   speedsword:
     description: gives you a speedsword
     permission: speedsword.get
+
+permissions:
+  speedsword.get:
+    default: op

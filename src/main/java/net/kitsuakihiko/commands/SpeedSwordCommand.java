@@ -1,5 +1,6 @@
-package de.angelshiina;
+package net.kitsuakihiko.commands;
 
+import net.kitsuakihiko.Main;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
