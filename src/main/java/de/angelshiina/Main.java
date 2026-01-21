@@ -1,12 +1,12 @@
-package net.kitsuakihiko;
+package de.angelshiina;
 
 import lombok.Getter;
-import net.kitsuakihiko.heavysword.HeavySword;
-import net.kitsuakihiko.heavysword.HeavySwordCommand;
-import net.kitsuakihiko.heavysword.HeavySwordListener;
-import net.kitsuakihiko.speedsword.SpeedSwordCommand;
-import net.kitsuakihiko.speedsword.SpeedSword;
-import net.kitsuakihiko.speedsword.SpeedSwordListener;
+import de.angelshiina.heavysword.HeavySword;
+import de.angelshiina.heavysword.HeavySwordCommand;
+import de.angelshiina.heavysword.HeavySwordListener;
+import de.angelshiina.speedsword.SpeedSwordCommand;
+import de.angelshiina.speedsword.SpeedSword;
+import de.angelshiina.speedsword.SpeedSwordListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 

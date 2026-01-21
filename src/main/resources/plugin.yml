@@ -1,8 +1,8 @@
-name: CustomItemTest
+name: custom-item-template
 version: '1.0-SNAPSHOT'
-main: net.kitsuakihiko.Main
+main: de.angelshiina.Main
 api-version: '1.21'
-authors: [ AngelShiina, Kitsuakihiko ]
+authors: [ AngelShiina ]
 commands:
   speedsword:
     description: gives you a speedsword

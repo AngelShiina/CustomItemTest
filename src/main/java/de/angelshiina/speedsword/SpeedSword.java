@@ -1,9 +1,9 @@
-package net.kitsuakihiko.speedsword;
+package de.angelshiina.speedsword;
 
 import io.papermc.paper.datacomponent.DataComponentTypes;
 import io.papermc.paper.datacomponent.item.Equippable;
 import io.papermc.paper.datacomponent.item.ItemAttributeModifiers;
-import net.kitsuakihiko.Main;
+import de.angelshiina.Main;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;

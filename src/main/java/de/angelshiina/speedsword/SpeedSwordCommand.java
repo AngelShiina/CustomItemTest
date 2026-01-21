@@ -1,13 +1,14 @@
-package net.kitsuakihiko.heavysword;
+package de.angelshiina.speedsword;
 
-import net.kitsuakihiko.Main;
+import de.angelshiina.Main;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class HeavySwordCommand implements CommandExecutor {
+public class SpeedSwordCommand implements CommandExecutor {
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player player)) {
@@ -15,14 +16,15 @@ public class HeavySwordCommand implements CommandExecutor {
             return true;
         }
 
-        if(!player.hasPermission("swords.get.heavysword")) {
+        if(!player.hasPermission("swords.get.speedsword")) {
             player.sendMessage(Main.getInstance().prefix + "§cYou don't have the permission to do this!");
             return true;
         }
 
-        ItemStack sword = Main.heavySword.getHeavySword();
+        ItemStack sword = Main.speedSword.getSpeedSword();
         player.getInventory().addItem(sword);
-        player.sendMessage(Main.getInstance().prefix + "§aYou got the HeavySword! §ehave fun §6:D");
+        player.sendMessage(Main.getInstance().prefix + "§aYou got the SpeedSword! §ehave fun §6:D");
         return true;
     }
+
 }
